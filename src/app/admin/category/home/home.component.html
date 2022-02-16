@@ -1,0 +1,65 @@
+<!-- <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-between stretch">
+    <div >
+      <div class="example-label">Category</div>
+      <div class="example-button-row">
+        <div class="example-flex-container">
+          <div class="example-button-container">
+            <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+        
+    </div>
+      
+</div> -->
+
+<mat-grid-list cols="1" rowHeight="60px">
+  <mat-grid-tile>
+    <h1 class="category-heading">Category</h1>
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="more-button" aria-label="Example icon-button with a menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>dialpad</mat-icon>
+        <span>Redial</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>voicemail</mat-icon>
+        <span>Check voice mail</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon>
+        <span>Disable alerts</span>
+      </button>
+    </mat-menu>
+    <button mat-mini-fab  mat-button (click)="openDialog() "color="primary" class="more-button" aria-label="Example icon button with a menu icon">
+      <mat-icon>add</mat-icon>
+    </button>
+  </mat-grid-tile>
+</mat-grid-list>
+<!-- 
+<app-category-list></app-category-list> -->
+  
+  <!-- <div class="mt20" fxLayout="row" fxLayoutAlign="space-between stretch" fxLayout.lt-md="column" fxLayoutGap="20px">
+    <mat-card fxFlex *ngFor="let item of places">
+      <img mat-card-image [src]="item.imgSrc">
+      <mat-card-header style="justify-content: center">
+        <mat-card-title>
+          <h3 class="m-0">{{item.name}}</h3>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        {{item.description}}
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>{{item.charge}}</button>
+        <button mat-button>
+          <mat-icon class="location-icon">location_on</mat-icon> {{item.location}}
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div> -->
+  
